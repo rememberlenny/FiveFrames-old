@@ -1,16 +1,19 @@
 class FramesController < ApplicationController
+  # Other CRUD actions omitted
 
   def create
-    @frame = Frame.create(frame_params)
+    @frame = Frame.new(frame_params)
+
+    if @frame.save
+      redirect_to @frame, notice: 'Friend was successfully created.'
+     else
+       render action: 'new'
+    end
   end
 
   private
 
-  def set_frame
-    @frame = Frame.find(params[:id])
-  end
-
   def frame_params
-    params.require(:frame).permit(:direct_upload_url)
+    params.require(:frame).permit(:character)
   end
 end

@@ -1,8 +1,11 @@
-<%= form_tag frames_path, method: :post, id: 'photoinfo', remote: true, authenticity_token: true, html: { multipart: true } do %>
-  <div class="photoPreview">
-    <p id="uploadClick">Click to Upload</p>
+<%= form_for(@frame, multipart: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :character %>
+    <%= f.file_field :character %>
   </div>
-  <%= file_field_tag :character, accept: 'image/png,image/gif,image/jpeg, image/jpg', id: 'uploadCharacter' %>
-  <p class="deletePhoto">Delete</p>
-  <%= submit_tag 'Submit Photo', id: 'submitPhoto' %>
+  <div class="actions">
+    <%= f.submit 'Make a friend' %>
+    <%= link_to 'Nevermind', frames_path, class: 'button' %>
+  </div>
 <% end %>
