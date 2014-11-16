@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'story/telling'
+  get 'frames' => 'story#telling'
 
   root 'pages#home'
-
+  resources :frames, only: ['create']
   get 'frame/character/upload' => 'frames#create'
 
   get 'about' => 'pages#about'

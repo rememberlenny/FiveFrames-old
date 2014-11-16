@@ -1,16 +1,16 @@
 class FramesController < ApplicationController
 
   def create
-    @frame = Frames.create( frames_params )
+    @frame = Frame.create(frame_params)
   end
 
   private
 
-  # Use strong_parameters for attribute whitelisting
-  # Be sure to update your create() and update() controller methods.
-
-  def frames_params
-    params.require(:frame).permit(:character)
+  def set_frame
+    @frame = Frame.find(params[:id])
   end
 
+  def frame_params
+    params.require(:frame).permit(:direct_upload_url)
+  end
 end
