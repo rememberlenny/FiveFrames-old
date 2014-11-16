@@ -30,3 +30,6 @@ function deletePhoto () {
         $('.photoUpload, #uploadClick').show();
     });
 }
+$('#photoinfo').bind("ajax:complete", function(data){
+  // do what you need, handle errors, etc
+});
