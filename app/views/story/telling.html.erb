@@ -1,9 +1,9 @@
-<%= form_tag card_photo_upload_path, method: :patch, id: 'photoinfo', remote: true, html: { multipart: true } do %>
+<%= form_tag frame_character_upload_path, method: :patch, id: 'photoinfo', remote: true, html: { multipart: true } do %>
   <div class="photoPreview">
     <%= icon('upload', '', class: 'photoUpload') %>
     <p id="uploadClick">Click to Upload</p>
   </div>
-  <%= file_field_tag :avatar, accept: 'image/png,image/gif,image/jpeg, image/jpg', id: 'uploadAvatar' %>
+  <%= file_field_tag :avatar, accept: 'image/png,image/gif,image/jpeg, image/jpg', id: 'uploadCharacter' %>
   <p class="deletePhoto">Delete</p>
   <%= submit_tag 'Submit Photo', id: 'submitPhoto' %>
 <% end %>

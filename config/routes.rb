@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'frame/character/upload' > 'frames#create'
+  get 'frame/character/upload' => 'frames#create'
 
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
