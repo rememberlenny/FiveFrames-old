@@ -3,7 +3,7 @@
     <%= icon('upload', '', class: 'photoUpload') %>
     <p id="uploadClick">Click to Upload</p>
   </div>
-  <%= file_field_tag :avatar, accept: 'image/png,image/gif,image/jpeg, image/jpg', id: 'uploadCharacter' %>
+  <%= file_field_tag :character, accept: 'image/png,image/gif,image/jpeg, image/jpg', id: 'uploadCharacter' %>
   <p class="deletePhoto">Delete</p>
   <%= submit_tag 'Submit Photo', id: 'submitPhoto' %>
 <% end %>
