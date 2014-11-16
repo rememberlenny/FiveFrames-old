@@ -1,0 +1,11 @@
+<%= form_for(@frame, multipart: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :character %>
+    <%= f.file_field :character %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Make a friend' %>
+    <%= link_to 'Nevermind', frames_path, class: 'button' %>
+  </div>
+<% end %>

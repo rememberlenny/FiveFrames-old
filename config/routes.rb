@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :frames
+
   get 'frames' => 'story#telling'
 
   root 'pages#home'
