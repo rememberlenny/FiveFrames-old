@@ -18,8 +18,3 @@
 
 $(function(){ $(document).foundation(); });
 
-var height = window.innerHeight;
-
-$(function(){
-  $('.full-frame-hero').css('height', height);
-});
