@@ -1,7 +1,7 @@
 var height = window.innerHeight;
 
 $(document).ready(function(){
-  $('.full-frame-hero').css('height', height);
+  $('.full-frame-hero, .text-start').css('height', height);
 
 });
 

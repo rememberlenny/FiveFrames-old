@@ -1,6 +1,6 @@
 <div class="full-frame-hero">
   <div class="row text-silo">
-    <div class="large-6 column large-centered text-center">
+    <div class="large-6 column large-centered text-left">
       <h1 class="main-title">Five Frames</h1>
       <p class="subheader">Tell your story.</p>
     </div>
@@ -8,7 +8,7 @@
 </div>
 
 
-<div class="row text-center dark-explaination">
+<div class="clearfix text-center dark-explaination">
   <h2>How it works</h2>
   <div class="large-12 column instructions-set">
     <p>1. Upload five frames.</p>
@@ -39,9 +39,11 @@
   </div>
 </div>
 
-<div class="row text-center">
-  <div class="large-6 column large-centered">
-    <h2>Get started now</h2>
-    <%= link_to "Start making", frames_path, :class => 'button' %>
+<div class="relative-wrapper large-12 ">
+  <div class="text-center text-start">
+    <div class="column text-silo">
+      <h2>Get started now</h2>
+      <%= link_to "Start making", frames_path, :class => 'button' %>
+    </div>
   </div>
 </div>
